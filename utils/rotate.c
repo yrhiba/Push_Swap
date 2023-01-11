@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/08 14:38:30 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/11 22:05:40 by yrhiba           ###   ########.fr       */
+/*   Created: 2023/01/11 21:54:39 by yrhiba            #+#    #+#             */
+/*   Updated: 2023/01/11 22:03:52 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char **av)
+int rotate(t_my_list **stack)
 {
-	t_push_swap	*stacks;
+	t_my_list *first;
+	t_my_list *iterator;
 
-	if (ac == 1)
+	if (!stack)
+		return (-1);
+	if (my_list_empty(*stack) || !((*stack)->next))
 		return (0);
-	if (staks_init(&stacks) == -1)
-		return (ft_printf("Error\n"), 0);
-	if (check_argv(ac, av, stacks) == -1)
-		return (ps_clear(stacks), ft_printf("Error\n"), 0);
-	
-	ft_printf("\ninit stacks : \n");
-	print_ab(stacks);
-	
-	ft_printf("\n(ra) rotate a : \n");
-	rotate(&(stacks->stack_a));
-	print_ab(stacks);
-
-	return (ps_clear(stacks), 0);
+	first = *stack;
+	*stack = (*stack)->next;
+	iterator = *stack;
+	while (iterator->next)
+		iterator = iterator->next;
+	iterator->next = first;
+	first->next = (t_my_list *)0;
+	return (0);
 }
