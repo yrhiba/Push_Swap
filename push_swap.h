@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 10:37:29 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/12 09:55:34 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/12 10:15:40 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,14 @@ int				reverse_rotate(t_my_list **stack);
 void			sa(t_push_swap *stacks);
 void			sb(t_push_swap *stacks);
 void			pa(t_push_swap *stacks);
+void			ss(t_push_swap *stacks);
 void			pb(t_push_swap *stacks);
 void			ra(t_push_swap *stacks);
 void			rb(t_push_swap *stacks);
+void			rr(t_push_swap *stacks);
 void			rra(t_push_swap *stacks);
 void			rrb(t_push_swap *stacks);
+void			rrr(t_push_swap *stacks);
 
 // debug functions
 void			print_ab(t_push_swap *staks);
