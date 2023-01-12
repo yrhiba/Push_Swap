@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 09:24:13 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/12 10:00:01 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/12 10:10:29 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,4 @@ void	sb(t_push_swap *stacks)
 {
 	if (swap(&(stacks->stack_b)) != 0)
 		return ;
-	ft_printf("sb\n");
 }
