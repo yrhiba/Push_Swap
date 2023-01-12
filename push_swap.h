@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 10:37:29 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/12 09:17:19 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/12 09:39:35 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ typedef struct s_push_swap
 {
 	t_my_list	*stack_a;
 	long long	size_a;
+
 	t_my_list	*stack_b;
 	long long	size_b;
 
@@ -44,6 +45,10 @@ int				rotate(t_my_list **stack);
 int				reverse_rotate(t_my_list **stack);
 
 // operations functions
+void			sa(t_push_swap *stacks);
+void			sb(t_push_swap *stacks);
+void			pa(t_push_swap *stacks);
+void			pb(t_push_swap *stacks);
 
 // debug functions
 void			print_ab(t_push_swap *staks);

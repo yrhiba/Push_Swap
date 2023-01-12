@@ -6,7 +6,7 @@
 #    By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/08 14:20:39 by yrhiba            #+#    #+#              #
-#    Updated: 2023/01/12 09:17:32 by yrhiba           ###   ########.fr        #
+#    Updated: 2023/01/12 09:37:43 by yrhiba           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,10 @@ SRCS =	push_swap.c \
 		utils/push.c \
 		utils/rotate.c \
 		utils/reverse_rotate.c \
+		operations/sa.c \
+		operations/sb.c \
+		operations/pa.c \
+		operations/pb.c \
 		debug/print_ab.c \
 		clear/ps_clear.c
 
