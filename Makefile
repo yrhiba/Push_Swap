@@ -6,7 +6,7 @@
 #    By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/08 14:20:39 by yrhiba            #+#    #+#              #
-#    Updated: 2023/01/11 22:36:30 by yrhiba           ###   ########.fr        #
+#    Updated: 2023/01/12 09:17:32 by yrhiba           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ OBJFLAGS = -Wall -Wextra -Werror
 SRCS =	push_swap.c \
 		parse/check_argv.c \
 		parse/staks_init.c \
-		utils/stack_sorted.c \
+		utils/is_sorted.c \
 		utils/swap.c \
 		utils/push.c \
 		utils/rotate.c \

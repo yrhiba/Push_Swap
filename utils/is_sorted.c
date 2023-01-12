@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_sorted.c                                     :+:      :+:    :+:   */
+/*   is_sorted.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 19:02:55 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/11 19:23:01 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/12 09:17:05 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	stack_sorted(t_my_list *it_stack, int order)
+int	is_sorted(t_my_list *it_stack, int order)
 {
 	if (order != DECORDER && order != INCORDER)
 		return (-1);
