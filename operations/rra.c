@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sb.c                                               :+:      :+:    :+:   */
+/*   rra.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/12 09:24:13 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/12 10:00:01 by yrhiba           ###   ########.fr       */
+/*   Created: 2023/01/12 09:55:48 by yrhiba            #+#    #+#             */
+/*   Updated: 2023/01/12 10:03:01 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sb(t_push_swap *stacks)
+void	rra(t_push_swap *stacks)
 {
-	if (swap(&(stacks->stack_b)) != 0)
+	if (reverse_rotate(&(stacks->stack_a)) != 1)
 		return ;
-	ft_printf("sb\n");
+	ft_printf("rra\n");
 }

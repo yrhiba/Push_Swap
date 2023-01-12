@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 22:29:42 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/11 22:40:56 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/12 09:57:30 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,6 @@ int	reverse_rotate(t_my_list **stack)
 	iterator = *stack;
 	while (iterator->next->next)
 		iterator = iterator->next;
-	last = iterator->next;
-	iterator->next = (t_my_list *)0;
-	last->next = *stack;
-	*stack = last;
-	return (0);
+	return (last = iterator->next, iterator->next = (t_my_list *)0,
+		last->next = *stack, *stack = last, 1);
 }

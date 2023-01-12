@@ -6,16 +6,16 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 21:54:39 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/11 22:03:52 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/12 09:53:18 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int rotate(t_my_list **stack)
+int	rotate(t_my_list **stack)
 {
-	t_my_list *first;
-	t_my_list *iterator;
+	t_my_list	*first;
+	t_my_list	*iterator;
 
 	if (!stack)
 		return (-1);
@@ -26,7 +26,5 @@ int rotate(t_my_list **stack)
 	iterator = *stack;
 	while (iterator->next)
 		iterator = iterator->next;
-	iterator->next = first;
-	first->next = (t_my_list *)0;
-	return (0);
+	return (iterator->next = first, first->next = (t_my_list *)0, 1);
 }
