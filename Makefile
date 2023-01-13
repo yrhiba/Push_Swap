@@ -6,7 +6,7 @@
 #    By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/08 14:20:39 by yrhiba            #+#    #+#              #
-#    Updated: 2023/01/13 12:51:06 by yrhiba           ###   ########.fr        #
+#    Updated: 2023/01/13 12:57:06 by yrhiba           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,9 @@ $(ODIR)%.o : %.c $(INCS)
 	@mkdir -p $(dir $@)
 	$(COMPILER) $(OBJFLAGS) -I . -I libft -I libmylist -c $< -o $@
 
-clean : clean_libft clean_libmylist
+clean :
+	make fclean -C libft
+	make fclean -C libmylist
 	rm -rf $(ODIR)
 
 fclean : clean
@@ -76,11 +78,5 @@ $(BONUS_NAME) : $(OBJS) $(OBJBSRC)
 	$(COMPILER) $(OBJS) $(OBJBSRC) -L libft -l ft -L libmylist -l mylist -o $(BONUS_NAME)
 
 bonus : $(BONUS_NAME)
-
-clean_libft :
-	make fclean -C libft
-
-clean_libmylist :
-	make fclean -C libmylist
 
 .PHONEY : all fclean clean re make_libft clean_libft make_libmylist clean_libmylist
