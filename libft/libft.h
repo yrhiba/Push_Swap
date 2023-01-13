@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 02:03:58 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/11 11:48:02 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/13 10:38:07 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ char					*ft_precision_s(char *s, t_print *tab);
 char					*ft_zerospaces_s(char *s, int c, int t_len);
 
 int						ft_printf(const char *format, ...);
+void					*ft_sprintf(const char *format, ...);
 
 int						ft_format(const char *format, int i, t_print *tab);
 

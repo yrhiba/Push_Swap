@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 14:38:30 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/12 11:18:14 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/13 10:28:51 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@ int	main(int ac, char **av)
 		return (ft_printf("Error\n"), 0);
 	if (check_argv(ac, av, stacks) == -1)
 		return (ps_clear(stacks), ft_printf("Error\n"), 0);
-	
+	return (ps_clear(stacks), 0);
+}
+
+/*
 	// debug section
 	ft_printf("\nInit Stacks \n\n");
 	print_ab(stacks);
@@ -104,5 +107,4 @@ int	main(int ac, char **av)
 	}
 	printf("\nCongratulations You Sorted the Stack With ->%d<- operations.\n", op);
 	// debug end
-	return (ps_clear(stacks), 0);
-}
+*/
