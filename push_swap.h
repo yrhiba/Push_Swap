@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 10:37:29 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/12 10:15:40 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/13 11:52:06 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,18 @@
 
 # define DECORDER 0
 # define INCORDER 1
+
+# define SA "sa\n"
+# define SB "sb\n"
+# define SS "ss\n"
+# define PA "pa\n"
+# define PB "pb\n"
+# define RA "ra\n"
+# define RB "rb\n"
+# define RR "rr\n"
+# define RRA "rra\n"
+# define RRB "rrb\n"
+# define RRR "rrr\n"
 
 typedef struct s_push_swap
 {
@@ -47,8 +59,8 @@ int				reverse_rotate(t_my_list **stack);
 // operations functions
 void			sa(t_push_swap *stacks);
 void			sb(t_push_swap *stacks);
-void			pa(t_push_swap *stacks);
 void			ss(t_push_swap *stacks);
+void			pa(t_push_swap *stacks);
 void			pb(t_push_swap *stacks);
 void			ra(t_push_swap *stacks);
 void			rb(t_push_swap *stacks);

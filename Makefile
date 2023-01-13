@@ -6,18 +6,25 @@
 #    By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/08 14:20:39 by yrhiba            #+#    #+#              #
-#    Updated: 2023/01/12 10:15:21 by yrhiba           ###   ########.fr        #
+#    Updated: 2023/01/13 12:51:06 by yrhiba           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
+BONUS_NAME = checker
+
 COMPILER = cc
 
 OBJFLAGS = -Wall -Wextra -Werror
 
-SRCS =	push_swap.c \
-		parse/check_argv.c \
+PSRC = push_swap.c
+BSRC = checker.c
+
+OBJPSRC = $(addprefix $(ODIR), $(PSRC:.c=.o))
+OBJBSRC = $(addprefix $(ODIR), $(BSRC:.c=.o))
+
+SRCS =	parse/check_argv.c \
 		parse/staks_init.c \
 		utils/is_sorted.c \
 		utils/swap.c \
@@ -44,8 +51,10 @@ ODIR = objs/
 
 OBJS = $(addprefix $(ODIR), $(SRCS:.c=.o))
 
-$(NAME) : $(OBJS) make_libft make_libmylist
-	$(COMPILER) $(OBJS) -L libft -l ft -L libmylist -l mylist -o $(NAME)
+$(NAME) : $(OBJS) $(OBJPSRC)
+	make all -C libft
+	make all -C libmylist
+	$(COMPILER) $(OBJS) $(OBJPSRC) -L libft -l ft -L libmylist -l mylist -o $(NAME)
 
 all : $(NAME)
 
@@ -57,18 +66,19 @@ clean : clean_libft clean_libmylist
 	rm -rf $(ODIR)
 
 fclean : clean
-	rm -rf $(NAME)
+	rm -rf $(NAME) $(BONUS_NAME)
 
 re : fclean all
 
-make_libft :
+$(BONUS_NAME) : $(OBJS) $(OBJBSRC)
 	make all -C libft
+	make all -C libmylist
+	$(COMPILER) $(OBJS) $(OBJBSRC) -L libft -l ft -L libmylist -l mylist -o $(BONUS_NAME)
+
+bonus : $(BONUS_NAME)
 
 clean_libft :
 	make fclean -C libft
-
-make_libmylist :
-	make all -C libmylist
 
 clean_libmylist :
 	make fclean -C libmylist
