@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 11:06:14 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/11 20:40:53 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/18 23:47:44 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,7 @@ int	ft_isint(char *str)
 	is_neg = 0;
 	if (str[i] == '-' || str[i] == '+')
 	{
-		if (str[i] == '-')
-			is_neg = 1;
+		is_neg = (str[i] == '-');
 		i++;
 	}
 	while (str[i])

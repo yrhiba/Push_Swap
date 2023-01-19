@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 19:02:55 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/12 09:17:05 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/18 23:50:56 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	is_sorted(t_my_list *it_stack, int order)
 			&& *((int *)(it_stack->data)) < *((int *)(it_stack->next->data)))
 			return (0);
 		else if (order == INCORDER
-				&& *((int *)(it_stack->data)) > *((int *)(it_stack->next->data)))
+			&& *((int *)(it_stack->data)) > *((int *)(it_stack->next->data)))
 			return (0);
 		it_stack = it_stack->next;
 	}

@@ -6,15 +6,15 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 11:24:08 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/10 21:44:55 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/18 23:48:28 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "my_list.h"
 
-t_my_list *my_list_new_elem(void *data)
+t_my_list	*my_list_new_elem(void *data)
 {
-	t_my_list *new;
+	t_my_list	*new;
 
 	if (!data)
 		return ((t_my_list *)0);

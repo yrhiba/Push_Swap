@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 10:37:29 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/13 11:52:06 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/18 23:36:33 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,9 @@ typedef struct s_push_swap
 
 	t_my_list	*stack_b;
 	long long	size_b;
+
+	int			max;
+	int			min;
 
 }				t_push_swap;
 

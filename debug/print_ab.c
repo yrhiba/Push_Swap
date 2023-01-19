@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 22:09:49 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/11 13:59:22 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/18 23:46:46 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,5 @@ void	print_ab(t_push_swap *staks)
 	ft_printf(" |--------------|  |--------------| \n");
 	ft_printf("      stack A           stack B     \n");
 	ft_printf("     ( %-5d )         ( %-5d )     \n", staks->size_a,
-			staks->size_b);
+		staks->size_b);
 }

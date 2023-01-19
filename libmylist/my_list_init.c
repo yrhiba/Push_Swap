@@ -6,13 +6,13 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 11:23:20 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/10 21:35:38 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/18 23:48:14 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "my_list.h"
 
-int my_list_init(t_my_list **list)
+int	my_list_init(t_my_list **list)
 {
 	if (!list)
 		return (-1);
