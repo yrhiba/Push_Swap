@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 10:37:29 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/19 03:17:45 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/19 20:03:58 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ typedef struct s_data
 	int			tar_pos;
 	int			cost_a;
 	int			cost_b;
+	int			lis;
 
 }				t_data;
 
