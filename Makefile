@@ -6,7 +6,7 @@
 #    By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/08 14:20:39 by yrhiba            #+#    #+#              #
-#    Updated: 2023/01/19 02:13:46 by yrhiba           ###   ########.fr        #
+#    Updated: 2023/01/20 00:07:27 by yrhiba           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,11 +27,12 @@ OBJBSRC = $(addprefix $(ODIR), $(BSRC:.c=.o))
 SRCS =	parse/check_argv.c \
 		parse/staks_init.c \
 		utils/is_sorted.c \
-		utils/swap.c \
-		utils/push.c \
-		utils/rotate.c \
-		utils/reverse_rotate.c \
 		utils/ft_datadup.c \
+		utils/set_tar_pos.c \
+		operations_utils/swap.c \
+		operations_utils/push.c \
+		operations_utils/rotate.c \
+		operations_utils/reverse_rotate.c \
 		operations/sa.c \
 		operations/sb.c \
 		operations/ss.c \

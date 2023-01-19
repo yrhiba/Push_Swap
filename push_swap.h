@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 10:37:29 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/19 20:03:58 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/20 00:07:02 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,12 +65,15 @@ int				staks_init(t_push_swap **staks);
 int				check_argv(int ac, char **av, t_push_swap *stacks);
 
 // utils functions
+t_data			*ft_datadup(int data, int cur_pos);
 int				is_sorted(t_my_list *it, int order);
+void			set_tar_pos(t_push_swap *staks);
+
+// operations utils functions
 int				swap(t_my_list **stack);
 int				push(t_my_list **to, t_my_list **from);
 int				rotate(t_my_list **stack);
 int				reverse_rotate(t_my_list **stack);
-t_data			*ft_datadup(int data, int cur_pos);
 
 // operations functions
 void			sa(t_push_swap *stacks);
