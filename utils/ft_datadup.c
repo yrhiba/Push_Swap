@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_datadup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/08 14:38:30 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/19 03:14:21 by yrhiba           ###   ########.fr       */
+/*   Created: 2023/01/19 02:07:19 by yrhiba            #+#    #+#             */
+/*   Updated: 2023/01/19 02:55:56 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char **av)
+t_data	*ft_datadup(int data, int cur_pos)
 {
-	t_push_swap	*stacks;
+	t_data	*r;
 
-	if (ac == 1)
-		return (0);
-	if (staks_init(&stacks) == -1)
-		return (ft_printf("Error\n"), 0);
-	if (check_argv(ac, av, stacks) == -1)
-		return (ft_printf("Error\n"), ps_clear(stacks), 0);
-	print_ab(stacks);
-	return (ps_clear(stacks), 0);
+	r = (t_data *)malloc(sizeof(t_data));
+	if (!r)
+		return (NULL);
+	return (r->cur_pos = cur_pos, r->data = data, r->in_sub = 0, r);
 }

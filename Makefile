@@ -6,7 +6,7 @@
 #    By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/08 14:20:39 by yrhiba            #+#    #+#              #
-#    Updated: 2023/01/13 12:57:06 by yrhiba           ###   ########.fr        #
+#    Updated: 2023/01/19 02:13:46 by yrhiba           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ SRCS =	parse/check_argv.c \
 		utils/push.c \
 		utils/rotate.c \
 		utils/reverse_rotate.c \
+		utils/ft_datadup.c \
 		operations/sa.c \
 		operations/sb.c \
 		operations/ss.c \

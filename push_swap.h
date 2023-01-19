@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 10:37:29 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/18 23:36:33 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/19 03:17:45 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,16 +48,28 @@ typedef struct s_push_swap
 
 }				t_push_swap;
 
+typedef struct s_data
+{
+	int			data;
+	int			in_sub;
+	int			cur_pos;
+	int			tar_pos;
+	int			cost_a;
+	int			cost_b;
+
+}				t_data;
+
 // parse functions
 int				staks_init(t_push_swap **staks);
 int				check_argv(int ac, char **av, t_push_swap *stacks);
 
 // utils functions
-int				is_sorted(t_my_list *it_stack, int order);
+int				is_sorted(t_my_list *it, int order);
 int				swap(t_my_list **stack);
 int				push(t_my_list **to, t_my_list **from);
 int				rotate(t_my_list **stack);
 int				reverse_rotate(t_my_list **stack);
+t_data			*ft_datadup(int data, int cur_pos);
 
 // operations functions
 void			sa(t_push_swap *stacks);
