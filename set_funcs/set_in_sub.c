@@ -1,28 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   set_prev_data.c                                    :+:      :+:    :+:   */
+/*   set_in_sub.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/20 00:31:36 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/20 00:36:31 by yrhiba           ###   ########.fr       */
+/*   Created: 2023/01/20 14:54:41 by yrhiba            #+#    #+#             */
+/*   Updated: 2023/01/20 17:02:21 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void set_prev_data(t_my_list *stack)
+void set_in_sub(t_push_swap *stacks, int lis)
 {
-	t_my_list	*it;
-	t_data		*prev;
+	t_data *it;
+	int		fo;
+	int		data;
 
-	prev = (t_data *)0;
-	it = stack;
+	fo = 1;
+	it = (t_data *)my_list_back(stacks->stack_a);
 	while (it)
 	{
-		((t_data *)(it->data))->prev = prev;
-		prev = (t_data *)(it->data);
-		it = it->next;
+		if (fo && (it->lis == lis))
+		{
+			it->in_sub = 1;
+			data = it->data;
+			lis -= 1;
+			fo = 0;
+		}
+		else if ((data > it->data) && (it->lis == lis))
+		{
+			it->in_sub = 1;
+			lis -= 1;
+			data = it->data;
+		}
+		it = it->prev;
 	}
 }

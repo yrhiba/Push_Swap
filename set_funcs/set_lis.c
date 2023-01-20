@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_datadup.c                                       :+:      :+:    :+:   */
+/*   set_lis.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/19 02:07:19 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/20 00:53:12 by yrhiba           ###   ########.fr       */
+/*   Created: 2023/01/20 14:21:50 by yrhiba            #+#    #+#             */
+/*   Updated: 2023/01/20 16:47:43 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_data	*ft_datadup(int data, int cur_pos)
+void	set_lis(t_push_swap *stacks)
 {
-	t_data	*r;
+	t_data	*curr;
+	t_data	*it;
+	int		j;
+	int		i;
+	int		max;
 
-	r = (t_data *)malloc(sizeof(t_data));
-	if (!r)
-		return (NULL);
-	r->tar_pos = -1;
-	r->prev = (t_data *)0;
-	r->lis = 1;
-	return (r->lis = 1, r->cur_pos = cur_pos, r->data = data, r->in_sub = 0, r);
+	j = 0;
+	while (++j < stacks->size_a)
+	{
+		curr = (t_data *)my_list_get(stacks->stack_a, j);
+		max = 0;
+		i = -1;
+		while (++i < j)
+		{
+			it = (t_data *)my_list_get(stacks->stack_a, i);
+			if ((it->data < curr->data) && (max < it->lis))
+					max = it->lis;
+		}
+		curr->lis = max + 1;
+	}
 }

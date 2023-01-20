@@ -6,7 +6,7 @@
 #    By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/08 14:20:39 by yrhiba            #+#    #+#              #
-#    Updated: 2023/01/20 00:36:17 by yrhiba           ###   ########.fr        #
+#    Updated: 2023/01/20 18:59:46 by yrhiba           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,12 +24,16 @@ BSRC = checker.c
 OBJPSRC = $(addprefix $(ODIR), $(PSRC:.c=.o))
 OBJBSRC = $(addprefix $(ODIR), $(BSRC:.c=.o))
 
-SRCS =	parse/check_argv.c \
+SRCS =	algorithms/longest_incresing_sub.c \
+		parse/check_argv.c \
 		parse/staks_init.c \
-		utils/is_sorted.c \
-		utils/ft_datadup.c \
-		utils/set_tar_pos.c \
-		utils/set_prev_data.c \
+		data_utils/data_dup.c \
+		data_utils/data_lis_init.c \
+		data_utils/data_in_sub_init.c \
+		set_funcs/set_tar_pos.c \
+		set_funcs/set_prev_data.c \
+		set_funcs/set_lis.c \
+		set_funcs/set_in_sub.c \
 		operations_utils/swap.c \
 		operations_utils/push.c \
 		operations_utils/rotate.c \
@@ -45,6 +49,8 @@ SRCS =	parse/check_argv.c \
 		operations/rra.c \
 		operations/rrb.c \
 		operations/rrr.c \
+		utils/is_sorted.c \
+		utils/get_max_lsi.c \
 		debug/print_ab.c \
 		clear/ps_clear.c
 

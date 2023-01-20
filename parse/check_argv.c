@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 09:51:11 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/19 03:16:30 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/20 18:21:40 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	check_argv(int ac, char **av, t_push_swap *stacks)
 		if (duplicated_num(stacks->stack_a, num))
 			return (-1);
 		if (my_list_push_back(&(stacks->stack_a),
-				my_list_new_elem(ft_datadup(num, i - 1))) == -1)
+				my_list_new_elem(data_dup(num, i - 1))) == -1)
 			return (-1);
 		check_min_max(stacks, i, num);
 		stacks->size_a++;

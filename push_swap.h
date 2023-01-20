@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 10:37:29 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/20 00:36:02 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/20 18:48:38 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,15 +61,27 @@ typedef struct s_data
 
 }					t_data;
 
+// algorithms
+void				longest_incresing_sub(t_push_swap *stacks);
+
 // parse functions
 int					staks_init(t_push_swap **staks);
 int					check_argv(int ac, char **av, t_push_swap *stacks);
 
 // utils functions
-t_data				*ft_datadup(int data, int cur_pos);
 int					is_sorted(t_my_list *it, int order);
+int					get_max_lsi(t_my_list *it);
+
+// data utils
+t_data				*data_dup(int data, int cur_pos);
+void				data_lis_init(t_push_swap *stacks);
+void				data_in_sub_init(t_push_swap *stacks);
+
+// set functions
 void				set_tar_pos(t_push_swap *staks);
-void				set_prev_data(t_my_list *stack);
+void				set_prev_data(t_push_swap *stacks);
+void				set_lis(t_push_swap *stacks);
+void				set_in_sub(t_push_swap *stacks, int lis);
 
 // operations utils functions
 int					swap(t_my_list **stack);
