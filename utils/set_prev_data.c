@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_datadup.c                                       :+:      :+:    :+:   */
+/*   set_prev_data.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/19 02:07:19 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/20 00:53:12 by yrhiba           ###   ########.fr       */
+/*   Created: 2023/01/20 00:31:36 by yrhiba            #+#    #+#             */
+/*   Updated: 2023/01/20 00:36:31 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_data	*ft_datadup(int data, int cur_pos)
+void set_prev_data(t_my_list *stack)
 {
-	t_data	*r;
+	t_my_list	*it;
+	t_data		*prev;
 
-	r = (t_data *)malloc(sizeof(t_data));
-	if (!r)
-		return (NULL);
-	r->tar_pos = -1;
-	r->prev = (t_data *)0;
-	r->lis = 1;
-	return (r->lis = 1, r->cur_pos = cur_pos, r->data = data, r->in_sub = 0, r);
+	prev = (t_data *)0;
+	it = stack;
+	while (it)
+	{
+		((t_data *)(it->data))->prev = prev;
+		prev = (t_data *)(it->data);
+		it = it->next;
+	}
 }

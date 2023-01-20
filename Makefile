@@ -6,7 +6,7 @@
 #    By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/08 14:20:39 by yrhiba            #+#    #+#              #
-#    Updated: 2023/01/20 00:07:27 by yrhiba           ###   ########.fr        #
+#    Updated: 2023/01/20 00:36:17 by yrhiba           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRCS =	parse/check_argv.c \
 		utils/is_sorted.c \
 		utils/ft_datadup.c \
 		utils/set_tar_pos.c \
+		utils/set_prev_data.c \
 		operations_utils/swap.c \
 		operations_utils/push.c \
 		operations_utils/rotate.c \
