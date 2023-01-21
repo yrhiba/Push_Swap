@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 10:37:29 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/20 18:48:38 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/21 01:27:59 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,7 @@ void				rrr(t_push_swap *stacks);
 
 // debug functions
 void				print_ab(t_push_swap *staks);
+void				print_lsi(t_push_swap *stacks);
 
 // clear functions
 void				ps_clear(t_push_swap *staks);

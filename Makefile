@@ -6,7 +6,7 @@
 #    By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/08 14:20:39 by yrhiba            #+#    #+#              #
-#    Updated: 2023/01/20 18:59:46 by yrhiba           ###   ########.fr        #
+#    Updated: 2023/01/21 01:27:29 by yrhiba           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,7 @@ SRCS =	algorithms/longest_incresing_sub.c \
 		utils/is_sorted.c \
 		utils/get_max_lsi.c \
 		debug/print_ab.c \
+		debug/print_lsi.c \
 		clear/ps_clear.c
 
 INCS = libft/libft.h libmylist/my_list.h

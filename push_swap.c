@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 14:38:30 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/20 19:02:20 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/21 01:49:40 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,6 @@ void	push_swap(t_push_swap *stacks)
 {
 	set_tar_pos(stacks);
 	longest_incresing_sub(stacks);
-
-	// debug
-	ft_printf("\nLongest Incresing Subsquece : \n");
-	t_my_list *it = stacks->stack_a;
-	while (it)
-	{
-		if (((t_data *)(it->data))->in_sub)
-			ft_printf("%d ", ((t_data *)(it->data))->data);
-		it = it->next;
-	}
-	ft_printf("\n\n");
-	print_ab(stacks);
-	// debug end
 }
 
 int	main(int ac, char **av)
@@ -45,24 +32,28 @@ int	main(int ac, char **av)
 }
 
 /*
-void debug(t_push_swap *stacks)
-{
-	t_my_list	*it;
 
-	// debug section ?? start
-	it = stacks->stack_a;
-	while (it)
-	{
-		ft_printf("pos : %d | data : %d | ", ((t_data *)(it->data))->cur_pos,
-				((t_data *)(it->data))->data);
-		ft_printf("tar_pos : %d | in_sub : %d | lis : %d | ",
-					((t_data *)(it->data))->tar_pos,
-					((t_data *)(it->data))->in_sub,
-					((t_data *)(it->data))->lis);
-		ft_printf("\n");
-		it = it->next;
-	}
-	// debug section ?? end
-	ft_printf("\n");
+if (size == 3)
+{
+
 }
+
+if (size == 5)
+{
+
+}
+
+if (size > 5 && stack a not sorted)
+{
+	1 -> calc lonngest incresing subsquence (testing every case (ra, sa) included)
+	2 -> push not in the lis in stack b
+	3 -> calc how take every elem to take there target position
+	4 -> pick how have the least operations and push it to stack a
+			-> 	calc the rb or ra that we need 
+				and do rr or rrr if ra and rb are both gona used
+	5 -> when stack b is empty rotate stack a at the correct position
+	6 -> finish the program
+
+}
+
 */
