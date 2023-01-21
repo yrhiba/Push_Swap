@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 00:05:02 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/20 15:05:33 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/21 15:43:45 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ static t_my_list	*get_min(t_my_list *stack)
 
 void	set_tar_pos(t_push_swap *staks)
 {
-	long long i;
-	t_my_list *min;
+	long long	i;
+	t_my_list	*min;
 
 	i = 0;
 	while (i < staks->size_a)

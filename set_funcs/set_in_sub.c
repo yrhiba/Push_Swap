@@ -6,15 +6,15 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 14:54:41 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/20 17:02:21 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/21 15:44:22 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void set_in_sub(t_push_swap *stacks, int lis)
+void	set_in_sub(t_push_swap *stacks, int lis)
 {
-	t_data *it;
+	t_data	*it;
 	int		fo;
 	int		data;
 

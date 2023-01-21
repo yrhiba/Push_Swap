@@ -6,16 +6,18 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 01:25:34 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/21 01:28:09 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/21 15:45:21 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void print_lsi(t_push_swap *stacks)
+void	print_lsi(t_push_swap *stacks)
 {
+	t_my_list	*it;
+
 	ft_printf("\nLongest Incresing Subsquece : \n");
-	t_my_list *it = stacks->stack_a;
+	it = stacks->stack_a;
 	while (it)
 	{
 		if (((t_data *)(it->data))->in_sub)

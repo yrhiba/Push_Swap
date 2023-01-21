@@ -6,13 +6,13 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 00:31:36 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/20 16:41:30 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/21 15:44:10 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void set_prev_data(t_push_swap *stacks)
+void	set_prev_data(t_push_swap *stacks)
 {
 	t_my_list	*it;
 	t_data		*prev;
