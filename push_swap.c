@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 14:38:30 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/21 01:49:40 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/21 02:21:33 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,16 @@ void	push_swap(t_push_swap *stacks)
 {
 	set_tar_pos(stacks);
 	longest_incresing_sub(stacks);
+	calc_cost_pb(stacks);
+
+	// debug
+	t_my_list *it;
+	it = stacks->stack_a;
+	while (it)
+	{
+		ft_printf("data : %5d -> cost : %5d\n", ((t_data *)(it->data))->data, ((t_data *)(it->data))->cost_pb);
+		it = it->next;
+	}
 }
 
 int	main(int ac, char **av)

@@ -6,7 +6,7 @@
 #    By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/08 14:20:39 by yrhiba            #+#    #+#              #
-#    Updated: 2023/01/21 01:27:29 by yrhiba           ###   ########.fr        #
+#    Updated: 2023/01/21 02:14:26 by yrhiba           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,8 @@ SRCS =	algorithms/longest_incresing_sub.c \
 		set_funcs/set_prev_data.c \
 		set_funcs/set_lis.c \
 		set_funcs/set_in_sub.c \
+		set_funcs/set_cur_pos.c \
+		calc_funcs/calc_cost_pb.c \
 		operations_utils/swap.c \
 		operations_utils/push.c \
 		operations_utils/rotate.c \

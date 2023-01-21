@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 10:37:29 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/21 01:27:59 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/21 02:13:50 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,8 @@ typedef struct s_data
 	int				in_sub;
 	int				cur_pos;
 	int				tar_pos;
-	int				cost_a;
-	int				cost_b;
+	int				cost_pa;
+	int				cost_pb;
 	int				lis;
 	struct s_data	*prev;
 
@@ -82,6 +82,10 @@ void				set_tar_pos(t_push_swap *staks);
 void				set_prev_data(t_push_swap *stacks);
 void				set_lis(t_push_swap *stacks);
 void				set_in_sub(t_push_swap *stacks, int lis);
+void				set_cur_pos(t_push_swap *stacks);
+
+// calc functions
+void				calc_cost_pb(t_push_swap *stacks);
 
 // operations utils functions
 int					swap(t_my_list **stack);
