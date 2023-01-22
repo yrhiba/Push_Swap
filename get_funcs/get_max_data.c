@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   get_max_data.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/08 14:38:30 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/22 19:07:09 by yrhiba           ###   ########.fr       */
+/*   Created: 2023/01/22 13:44:29 by yrhiba            #+#    #+#             */
+/*   Updated: 2023/01/22 13:51:46 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push_swap(t_push_swap *stacks)
+t_data	*get_max_data(t_my_list *stack)
 {
-	init_floor(stacks);
-	floor_one(stacks);
-	floor_two(stacks);
-}
+	t_my_list	*it;
+	t_data		*max;
 
-int	main(int ac, char **av)
-{
-	t_push_swap	*stacks;
-
-	if (ac == 1)
-		return (0);
-	if (staks_init(&stacks) == -1)
-		return (ft_printf("Error\n"), 0);
-	if (check_argv(ac, av, stacks) == -1)
-		return (ft_printf("Error\n"), ps_clear(stacks), 0);
-	return (push_swap(stacks), ps_clear(stacks), 0);
+	it = stack;
+	max = 0;
+	while (it)
+	{
+		if (!max || (max->data < ((t_data *)(it->data))->data))
+			max = (t_data *)it->data;
+		it = it->next;
+	}
+	return (max);
 }

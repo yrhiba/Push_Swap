@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 10:37:29 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/22 03:50:20 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/22 19:06:37 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,8 +86,12 @@ void				set_cur_pos(t_push_swap *stacks);
 // get functions
 t_data				*get_min_cost_pb_in_sub(t_push_swap *stacks);
 int					get_max_lsi(t_my_list *it);
+t_data				*get_max_data(t_my_list *stack);
+t_data				*get_min_data(t_my_list *stack);
+t_data				*get_to_data(t_push_swap *stacks, t_data *data);
 
 // calc functions
+void				calc_cost_pa(t_push_swap *stacks);
 void				calc_cost_pb(t_push_swap *stacks);
 int					calc_size_not_in_sub(t_my_list *stack);
 
@@ -113,6 +117,7 @@ void				rrr(t_push_swap *stacks);
 // sort floors
 void				init_floor(t_push_swap *stacks);
 void				floor_one(t_push_swap *stacks);
+void				floor_two(t_push_swap *stacks);
 
 // debug functions
 void				print_ab(t_push_swap *staks);
