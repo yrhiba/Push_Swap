@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 01:07:33 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/22 02:00:02 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/22 03:50:47 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	floor_one(t_push_swap *stacks)
 	int	i;
 	int	size;
 
-	size = calc_size_not_in_sub(stacks);
+	size = calc_size_not_in_sub(stacks->stack_a);
 	i = 0;
 	while (i < size)
 	{

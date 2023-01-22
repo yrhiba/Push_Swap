@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 10:37:29 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/22 01:12:48 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/22 03:50:20 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ int					get_max_lsi(t_my_list *it);
 
 // calc functions
 void				calc_cost_pb(t_push_swap *stacks);
-int					calc_size_not_in_sub(t_push_swap *stacks);
+int					calc_size_not_in_sub(t_my_list *stack);
 
 // operations utils functions
 int					swap(t_my_list **stack);
