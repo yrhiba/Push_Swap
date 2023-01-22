@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   calc_cost_pb.c                                     :+:      :+:    :+:   */
+/*   init_floor.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/21 01:52:15 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/22 01:37:02 by yrhiba           ###   ########.fr       */
+/*   Created: 2023/01/22 01:04:20 by yrhiba            #+#    #+#             */
+/*   Updated: 2023/01/22 01:36:59 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	calc_cost_pb(t_push_swap *stacks)
+void	init_floor(t_push_swap *stacks)
 {
-	t_my_list	*it;
-
-	it = stacks->stack_a;
-	while (it)
-	{
-		if (((t_data *)(it->data))->cur_pos > (stacks->size_a / 2))
-			((t_data *)(it->data))->cost_pb = stacks->size_a
-				- ((t_data *)(it->data))->cur_pos;
-		else
-			((t_data *)(it->data))->cost_pb = ((t_data *)(it->data))->cur_pos;
-		it = it->next;
-	}
+	set_tar_pos(stacks);
+	set_cur_pos(stacks);
+	calc_cost_pb(stacks);
+	longest_incresing_sub(stacks);
 }

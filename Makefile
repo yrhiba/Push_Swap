@@ -6,7 +6,7 @@
 #    By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/08 14:20:39 by yrhiba            #+#    #+#              #
-#    Updated: 2023/01/22 00:44:48 by yrhiba           ###   ########.fr        #
+#    Updated: 2023/01/22 01:12:41 by yrhiba           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,7 @@ SRCS =	algorithms/longest_incresing_sub.c \
 		get_funcs/get_max_lsi.c \
 		get_funcs/get_min_cost_pb_in_sub.c \
 		calc_funcs/calc_cost_pb.c \
+		calc_funcs/calc_size_not_in_sub.c \
 		operations_utils/swap.c \
 		operations_utils/push.c \
 		operations_utils/rotate.c \
@@ -53,6 +54,8 @@ SRCS =	algorithms/longest_incresing_sub.c \
 		operations/rra.c \
 		operations/rrb.c \
 		operations/rrr.c \
+		sort_floors/init_floor.c \
+		sort_floors/floor_one.c \
 		utils/is_sorted.c \
 		debug/print_ab.c \
 		debug/print_lsi.c \

@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   calc_cost_pb.c                                     :+:      :+:    :+:   */
+/*   calc_size_not_in_sub.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/21 01:52:15 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/22 01:37:02 by yrhiba           ###   ########.fr       */
+/*   Created: 2023/01/22 01:09:38 by yrhiba            #+#    #+#             */
+/*   Updated: 2023/01/22 01:12:14 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	calc_cost_pb(t_push_swap *stacks)
+int	calc_size_not_in_sub(t_push_swap *stacks)
 {
 	t_my_list	*it;
+	t_data		*data;
+	int			size;
 
+	size = 0;
 	it = stacks->stack_a;
 	while (it)
 	{
-		if (((t_data *)(it->data))->cur_pos > (stacks->size_a / 2))
-			((t_data *)(it->data))->cost_pb = stacks->size_a
-				- ((t_data *)(it->data))->cur_pos;
-		else
-			((t_data *)(it->data))->cost_pb = ((t_data *)(it->data))->cur_pos;
+		data = (t_data *)it->data;
+		if (!(data->in_sub))
+			size++;
 		it = it->next;
 	}
+	return (size);
 }
