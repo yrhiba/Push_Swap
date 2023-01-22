@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 10:37:29 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/21 02:13:50 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/22 00:44:36 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,6 @@ int					check_argv(int ac, char **av, t_push_swap *stacks);
 
 // utils functions
 int					is_sorted(t_my_list *it, int order);
-int					get_max_lsi(t_my_list *it);
 
 // data utils
 t_data				*data_dup(int data, int cur_pos);
@@ -83,6 +82,10 @@ void				set_prev_data(t_push_swap *stacks);
 void				set_lis(t_push_swap *stacks);
 void				set_in_sub(t_push_swap *stacks, int lis);
 void				set_cur_pos(t_push_swap *stacks);
+
+// get functions
+t_data				*get_min_cost_pb_in_sub(t_push_swap *stacks);
+int					get_max_lsi(t_my_list *it);
 
 // calc functions
 void				calc_cost_pb(t_push_swap *stacks);

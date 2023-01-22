@@ -6,7 +6,7 @@
 #    By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/08 14:20:39 by yrhiba            #+#    #+#              #
-#    Updated: 2023/01/21 02:14:26 by yrhiba           ###   ########.fr        #
+#    Updated: 2023/01/22 00:44:48 by yrhiba           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,8 @@ SRCS =	algorithms/longest_incresing_sub.c \
 		set_funcs/set_lis.c \
 		set_funcs/set_in_sub.c \
 		set_funcs/set_cur_pos.c \
+		get_funcs/get_max_lsi.c \
+		get_funcs/get_min_cost_pb_in_sub.c \
 		calc_funcs/calc_cost_pb.c \
 		operations_utils/swap.c \
 		operations_utils/push.c \
@@ -52,7 +54,6 @@ SRCS =	algorithms/longest_incresing_sub.c \
 		operations/rrb.c \
 		operations/rrr.c \
 		utils/is_sorted.c \
-		utils/get_max_lsi.c \
 		debug/print_ab.c \
 		debug/print_lsi.c \
 		clear/ps_clear.c
@@ -91,4 +92,4 @@ $(BONUS_NAME) : $(OBJS) $(OBJBSRC)
 
 bonus : $(BONUS_NAME)
 
-.PHONEY : all fclean clean re make_libft clean_libft make_libmylist clean_libmylist
+.PHONEY : all fclean clean re bonus
