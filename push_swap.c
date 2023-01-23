@@ -6,13 +6,13 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 14:38:30 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/23 21:32:58 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/23 21:34:56 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	quick_sort(t_push_swap *stacks)
+static void	quick_sort(t_push_swap *stacks)
 {
 	t_data	*front;
 	t_data	*second;
@@ -26,7 +26,7 @@ void	quick_sort(t_push_swap *stacks)
 	}
 }
 
-void	three_sort(t_push_swap *stacks)
+static void	three_sort(t_push_swap *stacks)
 {
 	t_data	*max;
 
