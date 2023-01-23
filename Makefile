@@ -6,7 +6,7 @@
 #    By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/08 14:20:39 by yrhiba            #+#    #+#              #
-#    Updated: 2023/01/22 19:06:31 by yrhiba           ###   ########.fr        #
+#    Updated: 2023/01/23 01:33:48 by yrhiba           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,8 +40,10 @@ SRCS =	algorithms/longest_incresing_sub.c \
 		get_funcs/get_max_data.c \
 		get_funcs/get_min_data.c \
 		get_funcs/get_to_data.c \
+		get_funcs/get_min_cost_pa.c \
 		calc_funcs/calc_cost_pa.c \
 		calc_funcs/calc_cost_pb.c \
+		calc_funcs/calc_cost_tp.c \
 		calc_funcs/calc_size_not_in_sub.c \
 		operations_utils/swap.c \
 		operations_utils/push.c \
@@ -61,9 +63,12 @@ SRCS =	algorithms/longest_incresing_sub.c \
 		sort_floors/init_floor.c \
 		sort_floors/floor_one.c \
 		sort_floors/floor_two.c \
+		sort_floors/end_floor.c \
 		utils/is_sorted.c \
+		utils/min_int.c \
 		debug/print_ab.c \
 		debug/print_lsi.c \
+		debug/print_statu.c \
 		clear/ps_clear.c
 
 INCS = libft/libft.h libmylist/my_list.h

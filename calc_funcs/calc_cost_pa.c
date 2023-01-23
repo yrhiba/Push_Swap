@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 03:48:20 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/22 19:08:17 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/23 00:24:30 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,16 @@ void	calc_cost_pa(t_push_swap *stacks)
 	{
 		data = (t_data *)it->data;
 		to = get_to_data(stacks, data);
-		if (!to)
-			return ;
 		if (data->cur_pos > (stacks->size_b / 2))
+		{
 			data->cost_pa = stacks->size_b - data->cur_pos + to->cost_pb;
+			data->to_up = 0;
+		}
 		else
+		{
 			data->cost_pa = data->cur_pos + to->cost_pb;
+			data->to_up = 1;
+		}
 		it = it->next;
 	}
 }

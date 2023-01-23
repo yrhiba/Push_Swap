@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   calc_cost_pb.c                                     :+:      :+:    :+:   */
+/*   end_floor.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/21 01:52:15 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/23 00:23:46 by yrhiba           ###   ########.fr       */
+/*   Created: 2023/01/23 01:32:27 by yrhiba            #+#    #+#             */
+/*   Updated: 2023/01/23 01:37:25 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	calc_cost_pb(t_push_swap *stacks)
+void	end_floor(t_push_swap *stacks)
 {
-	t_my_list	*it;
+	t_data	*min;
+	int		i;
 
-	it = stacks->stack_a;
-	while (it)
+	set_cur_pos(stacks);
+	calc_cost_pb(stacks);
+	min = get_min_data(stacks->stack_a);
+	i = 0;
+	while (i < min->cost_pb)
 	{
-		if (((t_data *)(it->data))->cur_pos > (stacks->size_a / 2))
+		if (min->to_up)
 		{
-			((t_data *)(it->data))->cost_pb = stacks->size_a
-				- ((t_data *)(it->data))->cur_pos;
-			((t_data *)(it->data))->to_up = 0;
+			ra(stacks);
+			ft_printf("ra\n");
 		}
 		else
 		{
-			((t_data *)(it->data))->cost_pb = ((t_data *)(it->data))->cur_pos;
-			((t_data *)(it->data))->to_up = 1;
+			rra(stacks);
+			ft_printf("rra\n");
 		}
-		it = it->next;
+		i++;
 	}
 }

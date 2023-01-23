@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 10:37:29 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/22 19:06:37 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/23 01:34:00 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,9 @@ typedef struct s_data
 	int				tar_pos;
 	int				cost_pa;
 	int				cost_pb;
+	int				cost_tp;
 	int				lis;
+	int				to_up;
 	struct s_data	*prev;
 
 }					t_data;
@@ -70,6 +72,7 @@ int					check_argv(int ac, char **av, t_push_swap *stacks);
 
 // utils functions
 int					is_sorted(t_my_list *it, int order);
+int					min_int(int a, int b);
 
 // data utils
 t_data				*data_dup(int data, int cur_pos);
@@ -89,10 +92,12 @@ int					get_max_lsi(t_my_list *it);
 t_data				*get_max_data(t_my_list *stack);
 t_data				*get_min_data(t_my_list *stack);
 t_data				*get_to_data(t_push_swap *stacks, t_data *data);
+t_data				*get_min_cost_pa(t_push_swap *stacks);
 
 // calc functions
 void				calc_cost_pa(t_push_swap *stacks);
 void				calc_cost_pb(t_push_swap *stacks);
+void				calc_cost_tp(t_push_swap *stacks);
 int					calc_size_not_in_sub(t_my_list *stack);
 
 // operations utils functions
@@ -118,10 +123,12 @@ void				rrr(t_push_swap *stacks);
 void				init_floor(t_push_swap *stacks);
 void				floor_one(t_push_swap *stacks);
 void				floor_two(t_push_swap *stacks);
+void				end_floor(t_push_swap *stacks);
 
 // debug functions
 void				print_ab(t_push_swap *staks);
 void				print_lsi(t_push_swap *stacks);
+void				print_statu(t_push_swap *stacks);
 
 // clear functions
 void				ps_clear(t_push_swap *staks);
