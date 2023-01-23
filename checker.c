@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 11:16:39 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/23 01:49:21 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/23 18:54:17 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,17 +43,14 @@ static int	exec_operations(t_push_swap *stacks)
 {
 	char	*cmd;
 
-	// print_ab(stacks);
 	cmd = get_next_line(STDIN_FILENO);
 	while (cmd)
 	{
 		if (do_operation(cmd, stacks) == -1)
 			return (free(cmd), -1);
-		// print_ab(stacks);
 		free(cmd);
 		cmd = get_next_line(STDIN_FILENO);
 	}
-	print_ab(stacks);
 	if (is_sorted(stacks->stack_a, INCORDER) && my_list_empty(stacks->stack_b))
 		return (0);
 	return (1);

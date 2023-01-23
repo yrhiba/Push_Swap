@@ -6,7 +6,7 @@
 #    By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/08 14:20:39 by yrhiba            #+#    #+#              #
-#    Updated: 2023/01/23 01:33:48 by yrhiba           ###   ########.fr        #
+#    Updated: 2023/01/23 18:55:45 by yrhiba           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,8 +64,10 @@ SRCS =	algorithms/longest_incresing_sub.c \
 		sort_floors/floor_one.c \
 		sort_floors/floor_two.c \
 		sort_floors/end_floor.c \
+		sort_floors/floor_two_utils.c \
 		utils/is_sorted.c \
 		utils/min_int.c \
+		utils/max_int.c \
 		debug/print_ab.c \
 		debug/print_lsi.c \
 		debug/print_statu.c \

@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 19:00:56 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/23 02:25:13 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/23 19:00:09 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static void	rotate_m2(t_push_swap *stacks, t_data *min, t_data *to)
 
 static void	rotate_m3(t_push_swap *stacks, t_data *min, t_data *to)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < min->cost_tp)
@@ -81,21 +81,7 @@ static void	rotate_m3(t_push_swap *stacks, t_data *min, t_data *to)
 		}
 		i++;
 	}
-	i = 0;
-	while (i < to->cost_pb)
-	{
-		if (to->to_up)
-		{
-			ra(stacks);
-			ft_printf("ra\n");
-		}
-		else
-		{
-			rra(stacks);
-			ft_printf("rra\n");
-		}
-		i++;
-	}
+	rotate_m3_con(stacks, to);
 }
 
 static void	push_min_cost(t_push_swap *stacks)
@@ -105,9 +91,6 @@ static void	push_min_cost(t_push_swap *stacks)
 
 	min = get_min_cost_pa(stacks);
 	to = get_to_data(stacks, min);
-	// print_ab(stacks);
-	// ft_printf("%min : %-3d cost : %-3d up : %d \n", min->data, min->cost_tp, min->to_up);
-	// ft_printf("%to  : %-3d cost : %-3d up : %d \n", to->data, to->cost_pb, to->to_up);
 	if (min->to_up && to->to_up)
 		rotate_m1(stacks, min, to);
 	else if (!(min->to_up) && !(to->to_up))

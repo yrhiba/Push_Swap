@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   set_prev_data.c                                    :+:      :+:    :+:   */
+/*   floor_two_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/20 00:31:36 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/23 18:53:46 by yrhiba           ###   ########.fr       */
+/*   Created: 2023/01/23 18:50:59 by yrhiba            #+#    #+#             */
+/*   Updated: 2023/01/23 18:56:58 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	set_prev_to(t_my_list *it)
+void	rotate_m3_con(t_push_swap *stacks, t_data *to)
 {
-	t_data	*prev;
+	int	i;
 
-	prev = (t_data *)0;
-	while (it)
+	i = 0;
+	while (i < to->cost_pb)
 	{
-		((t_data *)(it->data))->prev = prev;
-		prev = (t_data *)(it->data);
-		it = it->next;
+		if (to->to_up)
+		{
+			ra(stacks);
+			ft_printf("ra\n");
+		}
+		else
+		{
+			rra(stacks);
+			ft_printf("rra\n");
+		}
+		i++;
 	}
-}
-
-void	set_prev_data(t_push_swap *stacks)
-{
-	set_prev_to(stacks->stack_a);
-	set_prev_to(stacks->stack_b);
 }

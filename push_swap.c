@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 14:38:30 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/23 02:28:51 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/23 16:45:49 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,5 @@ int	main(int ac, char **av)
 		return (ft_printf("Error\n"), 0);
 	if (check_argv(ac, av, stacks) == -1)
 		return (ft_printf("Error\n"), ps_clear(stacks), 0);
-	push_swap(stacks);
-	return (print_statu(stacks), ps_clear(stacks), 0);
+	return (push_swap(stacks), ps_clear(stacks), 0);
 }

@@ -6,11 +6,11 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 23:54:55 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/22 23:56:28 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/23 18:53:18 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int min_int(int a, int b)
+int	min_int(int a, int b)
 {
 	if (a < b)
 		return (a);

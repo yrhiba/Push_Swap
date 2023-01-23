@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 10:37:29 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/23 01:34:00 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/23 18:57:04 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ int					check_argv(int ac, char **av, t_push_swap *stacks);
 // utils functions
 int					is_sorted(t_my_list *it, int order);
 int					min_int(int a, int b);
+int					max_int(int a, int b);
 
 // data utils
 t_data				*data_dup(int data, int cur_pos);
@@ -118,6 +119,9 @@ void				rr(t_push_swap *stacks);
 void				rra(t_push_swap *stacks);
 void				rrb(t_push_swap *stacks);
 void				rrr(t_push_swap *stacks);
+
+// sort floors utils
+void				rotate_m3_con(t_push_swap *stacks, t_data *to);
 
 // sort floors
 void				init_floor(t_push_swap *stacks);
