@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 10:37:29 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/23 18:57:04 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/24 02:19:52 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,8 @@ int					check_argv(int ac, char **av, t_push_swap *stacks);
 int					is_sorted(t_my_list *it, int order);
 int					min_int(int a, int b);
 int					max_int(int a, int b);
+int					word_count(char **strs);
+int					av_isvalid(char *av);
 
 // data utils
 t_data				*data_dup(int data, int cur_pos);
@@ -136,5 +138,6 @@ void				print_statu(t_push_swap *stacks);
 
 // clear functions
 void				ps_clear(t_push_swap *staks);
+void				av_clear(char **strs);
 
 #endif

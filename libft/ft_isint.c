@@ -6,13 +6,13 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 11:06:14 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/18 23:47:44 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/24 02:30:26 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isint(char *str)
+static int	ft_isint_con(char *str)
 {
 	int			is_neg;
 	int			i;
@@ -39,4 +39,25 @@ int	ft_isint(char *str)
 	if ((n <= INT_MAX && !is_neg) || (((n - 1) <= INT_MAX) && is_neg))
 		return (1);
 	return (0);
+}
+
+int	ft_isint(char *str)
+{
+	int	i;
+	int	r;
+
+	r = 0;
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] <= '9' && str[i] >= '0')
+		{
+			r = 1;
+			break ;
+		}
+		i++;
+	}
+	if (r == 0)
+		return (0);
+	return (ft_isint_con(str));
 }

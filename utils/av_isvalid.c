@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_clear.c                                         :+:      :+:    :+:   */
+/*   av_isvalid.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 10:50:15 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/24 02:06:37 by yrhiba           ###   ########.fr       */
+/*   Created: 2023/01/24 02:14:47 by yrhiba            #+#    #+#             */
+/*   Updated: 2023/01/24 02:21:16 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ps_clear(t_push_swap *staks)
+int	av_isvalid(char *av)
 {
-	my_list_clear(&(staks->stack_a));
-	my_list_clear(&(staks->stack_b));
-	free(staks);
-	staks = (t_push_swap *)0;
+	int	r;
+	int	i;
+
+	if (*av == '\0')
+		return (0);
+	r = 0;
+	i = 0;
+	while (av[i])
+	{
+		if (av[i] != 32 && av[i] != '\t')
+			r = 1;
+		i++;
+	}
+	return (r);
 }

@@ -6,7 +6,7 @@
 /*   By: yrhiba <yrhiba@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 09:51:11 by yrhiba            #+#    #+#             */
-/*   Updated: 2023/01/20 18:21:40 by yrhiba           ###   ########.fr       */
+/*   Updated: 2023/01/24 02:14:31 by yrhiba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	duplicated_num(t_my_list *nums, int num)
 	return (0);
 }
 
-void	check_min_max(t_push_swap *stacks, int index, int num)
+static void	check_min_max(t_push_swap *stacks, int index, int num)
 {
 	if (index == 1)
 	{
@@ -40,24 +40,68 @@ void	check_min_max(t_push_swap *stacks, int index, int num)
 		stacks->min = num;
 }
 
-int	check_argv(int ac, char **av, t_push_swap *stacks)
+static int	start_check_argv(int ac, char **av, t_push_swap *stacks)
 {
 	int	num;
 	int	i;
 
-	i = 0;
+	i = -1;
 	while (++i < ac)
 	{
 		if (!ft_isint(av[i]))
-			return (-1);
+			return (av_clear(av), -1);
 		num = ft_atoi(av[i]);
 		if (duplicated_num(stacks->stack_a, num))
-			return (-1);
+			return (av_clear(av), -1);
 		if (my_list_push_back(&(stacks->stack_a),
 				my_list_new_elem(data_dup(num, i - 1))) == -1)
-			return (-1);
+			return (av_clear(av), -1);
 		check_min_max(stacks, i, num);
 		stacks->size_a++;
 	}
-	return (0);
+	return (av_clear(av), 0);
+}
+
+static char	*joined(char *s1, char *s2)
+{
+	char	*rtn;
+	char	*tmp;
+
+	rtn = ft_strjoin(s1, " ");
+	if (!rtn)
+		return (NULL);
+	tmp = ft_strjoin(rtn, s2);
+	free(rtn);
+	if (!tmp)
+		return (NULL);
+	rtn = tmp;
+	return (rtn);
+}
+
+int	check_argv(int ac, char **av, t_push_swap *stacks)
+{
+	char	**oav;
+	char	*tmp;
+	char	*jav;
+	int		i;
+
+	jav = ft_strdup("");
+	if (!jav)
+		return (-1);
+	i = 1;
+	while (i < ac)
+	{
+		if (!av_isvalid(av[i]))
+			return (free(jav), -1);
+		tmp = joined(jav, av[i]);
+		free(jav);
+		if (!tmp)
+			return (-1);
+		jav = tmp;
+		i++;
+	}
+	oav = ft_split(jav, (char)32);
+	if (!oav)
+		return (free(jav), -1);
+	return (free(jav), start_check_argv(word_count(oav), oav, stacks));
 }
